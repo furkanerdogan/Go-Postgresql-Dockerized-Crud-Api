@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   postgrsql_db:
-    image: postgres:15
+    image: postgres:14
     restart: always
     volumes:
       - ./data/db:/var/lib/postgresql/data
@@ -11,5 +11,5 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_DB=user_management_api
-      - POSTGRES USER=postgres
-      - POSTGRES PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
